@@ -12,7 +12,7 @@
   background: #E9E900;
 }
 
-main{
+div.main{
   width: 95%;
   float: right;
   position: relative;
@@ -118,7 +118,7 @@ article.dev-story .dev-billboard {
   height: 80%;
   width: 100%;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.77)), 
-  url(../img/art-graffiti-paint-36759.jpg);
+  url('../img/art-graffiti-paint-36759.jpg');
   display: block;
   background-size: cover;
   background-position: center;
@@ -258,7 +258,7 @@ span.year {
 .minimal-avatar {
   height: 90%;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.77)), 
-  url(../img/art-graffiti-paint-36759.jpg);
+  url('../img/art-graffiti-paint-36759.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
