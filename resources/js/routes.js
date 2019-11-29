@@ -4,17 +4,32 @@ const routes = [
 
     { 
         path: '/', 
-        component: require('./views/Home').default 
+        component: require('.views/Home').default,
     },
 
     { 
-        path: '/category', 
-        component: require('./views/Category').default 
+        path: '/category/:id', 
+        component: require('./views/Category').default ,
+        name: 'category'
     },
 
     { 
-        path: '/post/:id', 
-        component: require('./views/Posts').default
+        path: '/dev/:id', 
+        component: require('./views/Posts').default,
+        name: 'dev'
+    },
+
+    { 
+        path: '/archive', 
+        component: require('./views/Archive').default,
+        name: 'archive',
+    },
+
+    { 
+        path: '/archive/:year', 
+        component: require('./views/Year').default,
+        name: 'year',
+        meta: { transitionName: 'slide' },
     }
 
 ];

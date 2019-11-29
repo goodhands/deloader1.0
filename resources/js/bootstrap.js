@@ -1,10 +1,45 @@
 window.Vue = require('vue');
 
 import VueRouter from 'vue-router';
+import Helpers from './core/Helpers';
+var SocialSharing = require('vue-social-sharing');
 
 Vue.use(VueRouter);
+Vue.use(SocialSharing);
+
+
+let helper = new Helpers();
+
+/**
+ * Global filter
+ */
+Vue.filter('readTime', function(value){
+    return helper.readTime(value);
+});
+
+/**
+ * Vue Directives
+ */
+Vue.directive('desktoponly', {
+    inserted: function(el){
+        if(window.screen.width <= 500){
+            el.style.display = "none";
+        }
+    }
+})
+
+Vue.directive('mobileonly', {
+    inserted: function(el){
+        if(window.screen.width > 500){
+            el.style.display = "none";
+        }
+    }
+})
 
 window.axios = require('axios');
+
+import Form from './core/Form';
+import Errors from './core/Errors';
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
@@ -21,3 +56,7 @@ if (token) {
 } else {
     console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
 }
+
+window.Form = Form;
+window.Errors = Errors;
+window.Helpers = Helpers;

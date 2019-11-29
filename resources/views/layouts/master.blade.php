@@ -7,17 +7,7 @@
         <main id="app">
             @include('partials.sidebar')
             <div class="main">                
-                <div class="menu">
-                    <button class="btn btn-transparent">
-                        <span class="caret-line top"></span>
-                        <span class="caret-line bottom"></span>
-                    </button>
-                </div>
-                {{-- insert page here --}}
-                <router-view></router-view>
-
-                @include('partials.subscribe')
-                @include('partials.footer')
+                <app></app>
             </div>
         </main>
         <script src="{{asset('js/app.js')}}"></script>

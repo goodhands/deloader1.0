@@ -8,8 +8,11 @@
 require('./bootstrap');
 
 import router from './routes';
+// import moment from 'moment';
+import App from './views/App';
 
 const app = new Vue({
     el: '#app',
-    router
+    router,
+    components: { App }
 });
