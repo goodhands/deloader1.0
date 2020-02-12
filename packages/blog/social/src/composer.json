@@ -1,0 +1,29 @@
+{
+    "name": "user/src",
+    "description": "My first laravel package",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Olaegbe Samuel",
+            "email": "25031528+goodhands@users.noreply.github.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Blog\\Social\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+          "providers": [
+            "Blog\\Social\\SocialServiceProvider"
+          ],
+          "aliases": {
+            "Social": "Blog\\Social\\SocialServiceProvider"
+          }
+        }
+    },
+    "require": {}
+}

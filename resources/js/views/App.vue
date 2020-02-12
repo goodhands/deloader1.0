@@ -21,6 +21,7 @@
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis alias sapiente nisi itaque saepe Omnis alias sapiente nisi itaque saepe 
                 </p>
                 <hr>
+                <button @click="shareToMobile">Share to mobile</button>
                 <ul class="list-style menu-items">
                     <li><a href="home">NodeJs</a></li>
                     <li><a href="about">Laravel</a></li>
@@ -60,6 +61,24 @@
             return {
                 showNav: false,
                 showMenuLinks: false
+            }
+        },
+
+        methods: {
+            shareToMobile(){
+                const shareInfo = {
+                    'title' : 'My new year resolution',
+                    'text' : 'Join the #100DaysOfCode Challenge',
+                    'url' : 'https://twitter.com/devloader'
+                }
+
+                if(navigator.share){
+                    btn.addEventListener('click', async() => {
+                        await navigator.share(shareInfo)
+                        .then( () => console.log('Shared successfully'))
+                        .catch( (error) => console.log('An error occured ', error))
+                    })
+                }
             }
         },
 

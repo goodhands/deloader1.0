@@ -4,7 +4,7 @@ const routes = [
 
     { 
         path: '/', 
-        component: require('.views/Home').default,
+        component: require('./views/Home').default,
     },
 
     { 

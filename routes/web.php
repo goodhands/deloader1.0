@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/import', 'PostsController@fetchPosts');
 
 Route::post('/posts', 'PostsController@index');
@@ -41,4 +37,7 @@ Route::post('/category/post/{slug}', 'CategoryController@posts');
 
 Route::post('/category/best3', 'CategoryController@bestThree');
 
-Route::get('/{any}', 'VueController@index')->where('any', '.*');
+// Route::get('/{any}', 'VueController@index')->where('any', '.*');
+Route::get('/sm', function () {
+    echo "GEtttt";
+});
