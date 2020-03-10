@@ -37,7 +37,4 @@ Route::post('/category/post/{slug}', 'CategoryController@posts');
 
 Route::post('/category/best3', 'CategoryController@bestThree');
 
-// Route::get('/{any}', 'VueController@index')->where('any', '.*');
-Route::get('/sm', function () {
-    echo "GEtttt";
-});
+Route::get('/{any}', 'VueController@index')->where('any', '.*');
