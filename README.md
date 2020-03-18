@@ -1,4 +1,4 @@
 ![Devloader Screenshot](/resources/img/devloader_screenshot.PNG)
 
-# devloader1.0
-Source code for my personal blog created with VueJs, Wordpress CMS &amp; Laravel 
+# Devloader 1.0
+Single page personal blog created with VueJs, Wordpress CMS &amp; Laravel 
